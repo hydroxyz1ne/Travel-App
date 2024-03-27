@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarStyle="outsideOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Ваше содержимое ScrollView -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Заголовок -->
+
+                <TextView
+                    android:id="@+id/login_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:textColor="@color/black"
+                    android:text="Tilewind"
+                    android:textSize="32sp"
+                    android:fontFamily="@font/semibold"
+                    android:layout_marginTop="96dp" />
+
+                <!-- Контейнер для всех элементов -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Ваш контейнер с горизонтальным скроллом 1 -->
+
+                    <HorizontalScrollView
+                        android:id="@+id/scrollAll"
+                        android:layout_width="match_parent"
+                        android:layout_height="340dp"
+                        android:layout_marginTop="160dp"
+                        android:layout_marginStart="20dp">
+
+                        <LinearLayout
+                            android:id="@+id/linearPlaceContainer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!-- Ваши элементы для скролла 1 -->
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <!-- Текст "Избранные" -->
+
+                    <TextView
+                        android:id="@+id/favoriteText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:textColor="@color/black"
+                        android:text="Избранные"
+                        android:textSize="24sp"
+                        android:fontFamily="@font/semibold"
+                        android:layout_marginTop="20dp" />
+
+                    <!-- Ваш контейнер с горизонтальным скроллом 2 -->
+
+                    <HorizontalScrollView
+                        android:id="@+id/scrollFavorite"
+                        android:layout_width="match_parent"
+                        android:layout_height="340dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="20dp">
+
+                        <LinearLayout
+                            android:id="@+id/linearFavoriteContainer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!-- Ваши элементы для скролла 2 -->
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
